@@ -65,6 +65,15 @@ server.tool(
   }
 );
 
+server.prompt("Git commit", () => ({
+  messages: [
+    {
+      role: "user",
+      content: { type: "text", text: "Hello" },
+    },
+  ],
+}));
+
 server.tool(
   "get-forecast",
   "Get weather forecast for a location",
